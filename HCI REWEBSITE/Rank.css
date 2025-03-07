@@ -1,0 +1,12 @@
+body {
+    background: url('uuiq2u3nmpz11.webp');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 50;
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat;
+    transition: 100ms;
+}

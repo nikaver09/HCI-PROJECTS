@@ -1,0 +1,60 @@
+body {
+    background: url('faceit-corporate-default-og-image.png');
+    background-color: #111;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.player-card {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(145deg, #222, #000);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 5px 15px #000, -5px -5px 15px #222;
+    transition: transform 0.3s;
+}
+.player-card:hover {
+    transform: scale(1.1);
+}
+.map-selection {
+    display: flex;
+    gap: 10px;
+}
+.map {
+    width: 100px;
+    height: 50px;
+    background: linear-gradient(145deg, #333, #111);
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 5px 5px 10px #000, inset -5px -5px 10px #222;
+}
+.play-button {
+    background: #ff6600;
+    padding: 15px 40px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 5px 5px 15px #000, -5px -5px 15px #222;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.play-button:hover {
+    transform: scale(1.1);
+    box-shadow: 3px 3px 10px #000, -3px -3px 10px #222;
+}

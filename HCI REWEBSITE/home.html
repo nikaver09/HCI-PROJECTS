@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FACEIT Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body class="bg-black text-white">
+    <div class="flex h-screen">
+        
+        <!-- Sidebar Navigation -->
+        <nav class="w-64 bg-gray-900 p-4 flex flex-col space-y-4 shadow-lg">
+            <h1 class="text-orange-500 text-xl font-bold">FACEIT</h1>
+            <ul class="space-y-2">
+                <li>
+                    <a href="#" onclick="Play()" class="block p-2 hover:bg-gray-800 rounded shadow">Play</a>
+                </li>
+                <li>
+                    <a href="#" onclick="Rank()" class="block p-2 hover:bg-gray-800 rounded shadow">Rank</a>
+                </li>
+                <li>
+                    <a href="#" onclick="WatchLIVE()" class="block p-2 hover:bg-gray-800 rounded shadow">
+                        Watch <span class="text-red-500">LIVE</span>
+                    </a>
+                </li>
+            </ul>
+            <button class="mt-auto bg-green-500 text-black p-2 rounded shadow-lg">Upgrade</button>
+        </nav>
+        
+        <!-- Main Content -->
+        <main class="flex-1 p-6">
+            
+            <!-- Premium Upgrade Banner -->
+            <div class="bg-gray-800 p-4 rounded mb-4 text-center shadow-lg">
+                <h2 class="text-lg font-bold">
+                    Elevate every match with <span class="text-green-500">FACEIT Premium</span>
+                </h2>
+                <p>Play better matches • Customize matches • Earn rewards</p>
+                <button class="mt-2 bg-green-500 text-black p-2 rounded shadow">Upgrade Now</button>
+            </div>
+            
+            <!-- Features Grid -->
+            <div class="grid grid-cols-3 gap-4">
+                
+                <!-- Matchmaking -->
+                <div class="bg-gray-800 p-4 rounded text-center shadow-lg">
+                    <h3 class="text-lg font-bold">Matchmaking</h3>
+                    <div class="bg-red-500 w-16 h-16 mx-auto rounded-full flex items-center justify-center shadow-lg">
+                        ⚔️
+                    </div>
+                </div>
+                
+                <!-- Leagues -->
+                <div class="bg-gray-800 p-4 rounded text-center shadow-lg">
+                    <h3 class="text-lg font-bold">Leagues</h3>
+                    <div class="bg-green-500 w-16 h-16 mx-auto rounded-full flex items-center justify-center shadow-lg">
+                        ⭐
+                    </div>
+                </div>
+                
+            </div>
+            
+            <!-- Party Finder -->
+            <div class="bg-gray-800 p-4 rounded mt-4 shadow-lg">
+                <h3 class="text-lg font-bold">Parties</h3>
+                <p>No parties are available at this moment. Be the first to create one!</p>
+                <button class="mt-2 bg-gray-700 p-2 rounded shadow">Party Finder</button>
+            </div>
+            
+            <!-- Clubs Section -->
+            <div class="bg-gray-800 p-4 rounded mt-4 shadow-lg">
+                <h3 class="text-lg font-bold">Clubs</h3>
+                <ul class="space-y-2">
+                    <li class="flex justify-between">
+                        Team Vitality <span class="text-gray-400">27,868</span>
+                    </li>
+                    <li class="flex justify-between">
+                        Omen Esports <span class="text-gray-400">759</span>
+                    </li>
+                </ul>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- JavaScript Functions -->
+    <script>
+        function WatchLIVE() {
+            alert("NOW LIVE!!!");
+            window.open('https://www.twitch.tv/eslcs', '_blank');
+        }
+
+        function Play() {
+            alert("GO TO PLAY");
+            window.open('Play.html', '_self');
+        }
+
+        function Rank() {
+            alert("SEE MY RANKS");
+            window.open('Rank.html', '_self');
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faceit Login</title>
+    <link rel="stylesheet" href="faceitdesign.css">
+</head>
+<body>
+    <div class="container">
+        <form class="login-form" id="loginForm">
+            <label for="email">Email address</label>
+            <input type="email" id="email" required>
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" required>
+            
+            <a href="#" class="forgot">Forgot password?</a>
+            
+            <button type="submit" class="login-btn">LOGIN</button>
+        </form>
+        
+        <div class="CREATE">
+            <button class="create-btn" onclick="createAccount()">CREATE ACCOUNT</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            
+            if (email === "nik90@gmail.com" && password === "aver90") {
+                alert("Login successful!");
+                LOGIN();
+            } else {
+                alert("Invalid email or password");
+            }
+        });
+        
+        function LOGIN() {
+            window.location.href = "home.html";
+        }
+        
+        function createAccount() {
+            window.location.href = "signup.html";
+        }
+    </script>
+</body>
+</html>
