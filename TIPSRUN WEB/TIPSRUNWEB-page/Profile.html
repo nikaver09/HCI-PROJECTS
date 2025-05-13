@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Profile</title>
+  <link rel="stylesheet" href="Profilestyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <img id="logo" src="White_Illustrative_Running_Sport_Logo__2_-removebg-preview.png" alt="Logo" class="logo" style="cursor: pointer;" />
+
+    <header>
+      <nav>
+        <a href="Home.html">Home</a>
+        <a href="Profile.html">Profile</a>
+        <a href="settings.html">Settings</a>
+        <a href="Loginform.html" id="logoutBtn">Logout</a>
+      </nav>
+    </header>
+
+    <div class="activity-summary">
+      <div class="profile-info">
+        <img src="vecteezy_profile-icon-design-vector_5544718.jpg" alt="Profile Picture">
+        <h2>Eren</h2>
+        <div class="location"><i class="fa fa-map-marker-alt"></i> Davao</div>
+        <div class="bio">Running</div>
+      </div>
+
+      <div class="activity-details">
+        <div class="summary-header">
+          <h4>Last 4 Weeks</h4>
+          <div class="total-activities">3</div>
+        </div>
+
+        <div class="week-days">
+          <div>M</div><div>T</div><div>W</div><div>T</div><div>F</div><div>S</div><div>S</div>
+        </div>
+
+        <div class="heatmap">
+          <div></div><div class="active"></div><div></div><div></div><div class="active"></div><div></div><div></div>
+        </div>
+        <div class="heatmap">
+          <div class="active"></div><div></div><div></div><div></div><div class="active"></div><div></div><div></div>
+        </div>
+
+        <div class="activity-icons">
+          <i class="fa fa-shoe-prints"></i>
+        </div>
+
+        <div class="duration-bars">
+          <div class="duration-bar running">
+            <span>0h 15m</span>
+            <div class="bar"></div>
+          </div>
+          <div class="duration-bar cycling">
+            <span>3h 44m</span>
+            <div class="bar"></div>
+          </div>
+        </div>
+
+        <!-- 📊 Chart -->
+        <div class="activity-chart">
+          <canvas id="activityChart" height="180"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <script src="logoclick.js"></script>
+    <script src="chart-setup.js"></script>
+  </div>
+</body>
+</html>

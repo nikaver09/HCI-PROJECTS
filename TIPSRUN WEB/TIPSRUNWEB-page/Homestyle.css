@@ -1,0 +1,170 @@
+/* Background */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('https://c0.wallpaperflare.com/preview/740/290/352/active-activity-adult-road.jpg')
+    center/cover no-repeat;
+  background-size: cover; /* Ensures the image covers the whole viewport */
+  background-position: center center; /* Centers the image */
+  background-attachment: fixed; /* Keeps the background fixed during scrolling */
+  color: #fff;
+  height: 100vh; /* Ensures the body takes the full height of the viewport */
+  background-attachment: fixed;
+}
+
+/* Logo */
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 100px;
+  transform: translateZ(60px);
+  transition: transform 0.3s ease;
+}
+.logo:hover {
+  transform: translateZ(80px) rotateY(10deg);
+}
+
+/* Header (Floating Panel) */
+header {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transform-style: preserve-3d;
+  transform: translateZ(40px) rotateX(5deg);
+  text-align: center;
+  opacity: 0;
+
+  animation:
+    fadeInUp 0.8s ease-out 0.2s forwards,
+    float 6s ease-in-out 1s infinite alternate;
+}
+
+header:hover {
+  transform: translateZ(60px) rotateX(0deg);
+}
+
+header h1 {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* Navigation Links */
+nav a {
+  display: inline-block;
+  margin: 0 15px;
+  color: #fff;
+  font-weight: bold;
+  transform: translateZ(30px);
+  opacity: 0;
+
+  animation: fadeInUp 0.6s ease-out forwards;
+  transition: transform 0.3s ease, color 0.2s;
+}
+
+nav a:hover {
+  transform: translateZ(50px) rotateY(5deg);
+  color: #7cfff8;
+}
+
+nav a:nth-of-type(1) { animation-delay: 0.4s; }
+nav a:nth-of-type(2) { animation-delay: 0.6s; }
+nav a:nth-of-type(3) { animation-delay: 0.8s; }
+nav a:nth-of-type(4) { animation-delay: 1s; }
+
+
+main {
+  margin: auto;
+  border-radius: 12px;
+  text-align: center;
+  margin-top: 50px;
+   max-width: 1000px;
+}
+
+.card {
+  border-radius: 16px;
+  padding: 30px;
+  width: 950px;
+  transform: translateZ(20px) rotateX(2deg) translateY(20px);
+  transform-style: preserve-3d;
+  opacity: 0;
+  display: inline-block;
+
+  animation:
+    fadeInUp 0.8s ease-out forwards,
+    float 5s ease-in-out 1.2s infinite alternate;
+
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover {
+  transform: translateZ(60px) rotateX(0deg);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7);
+}
+
+.card h2 {
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+.card p,
+.card ul {
+  font-size: 0.95rem;
+  color: #eee;
+}
+
+.card ul li {
+  margin: 8px 0;
+}
+
+.card ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.card ul li a:hover {
+  color: #5cfff1;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  color: #ccc;
+  transform: translateZ(10px);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px) translateZ(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) translateZ(40px) rotateX(5deg);
+  }
+}
+
+@keyframes spin-once {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin-once {
+  animation: spin-once 1s linear;
+}

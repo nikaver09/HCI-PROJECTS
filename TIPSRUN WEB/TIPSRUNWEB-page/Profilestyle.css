@@ -1,0 +1,246 @@
+/* Base */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+              url('https://c0.wallpaperflare.com/preview/740/290/352/active-activity-adult-road.jpg') center/cover no-repeat;
+  background-attachment: fixed;
+  color: #fff;
+  height: 100vh;
+}
+
+.container {
+  padding: 20px;
+}
+
+/* Logo */
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 100px;
+  transition: transform 0.3s ease;
+}
+.logo:hover {
+  transform: scale(1.1) rotateY(10deg);
+}
+
+/* Header */
+header {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  text-align: center;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+nav a {
+  margin: 0 15px;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+nav a:hover {
+  color: #7cfff8;
+}
+
+/* Profile Form */
+.profile-form {
+  margin: 60px auto 40px;
+  max-width: 500px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  animation: fadeInUp 0.8s ease-out 0.5s forwards;
+  opacity: 0;
+}
+.profile-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.profile-form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+.profile-form input,
+.profile-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: none;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+.profile-form button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #7cfff8;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.profile-form button:hover {
+  background-color: #4df5ec;
+}
+
+/* Activity Summary */
+.activity-summary {
+  display: flex;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 16px;
+  max-width: 1000px;
+  margin: 40px auto;
+  color: #fff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  gap: 40px;
+}
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 250px;
+}
+.profile-info img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 3px solid #fff;
+ 
+}
+.profile-info h2 {
+  margin: 0;
+}
+.profile-info .location {
+  font-size: 14px;
+  margin-top: 5px;
+  color: #ccc;
+}
+.profile-info .bio {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #ccc;
+}
+.activity-details {
+  flex: 1;
+}
+.summary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.summary-header h4 {
+  font-size: 14px;
+  color: #aaa;
+}
+.total-activities {
+  font-size: 48px;
+  font-weight: bold;
+}
+.week-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-top: 20px;
+  font-size: 12px;
+  color: #ccc;
+  text-align: center;
+}
+.heatmap {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+  margin-top: 10px;
+}
+.heatmap div {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.heatmap .active {
+  background-color: #00ffcc;
+}
+.activity-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+  font-size: 18px;
+  color: #ddd;
+}
+.duration-bars {
+  margin-top: 10px;
+}
+.duration-bar {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 8px;
+}
+.duration-bar .bar {
+  flex: 1;
+  height: 8px;
+  background-color: #b7fbe1;
+  border-radius: 4px;
+  margin-left: 10px;
+  position: relative;
+}
+.duration-bar .bar::after {
+  content: '';
+  display: block;
+  height: 100%;
+  background-color: #00d9a6;
+  width: 70%;
+  border-radius: 4px;
+}
+.duration-bar.running .bar::after {
+  width: 7%;
+}
+.duration-bar.cycling .bar::after {
+  width: 90%;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.activity-chart {
+  margin-top: 30px;
+}
+
+@keyframes spin-once {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin-once {
+  animation: spin-once 1s linear;
+}

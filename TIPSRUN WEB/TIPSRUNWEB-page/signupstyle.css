@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+      url('https://c0.wallpaperflare.com/preview/740/290/352/active-activity-adult-road.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    font-style: italic;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    background-attachment: fixed;
+  }
+
+  .content {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  
+  }
+  
+  .logo {
+    position: absolute;
+    margin-top: -105px;
+    left: -0px;
+    width: 100px;
+    
+  }
+  
+  .logo:hover {
+    opacity: 0.8;
+    cursor: pointer;
+    border-radius: 1px; 
+  }
+  
+  h1 {
+    margin: 0 0 10px 0;
+    font-size: 2.5rem;
+  }
+  
+  p {
+    margin: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1rem;
+  }
+  .signup-form {
+    perspective: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+  }
+  
+  #signupForm {
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 40px 30px;
+    width: 300px;
+    box-shadow: default;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  #signupForm:hover {
+    transform: rotateY(10deg);
+  }
+  
+  #signupForm input {
+    display: block;
+    width: 100%;
+    padding: 9px 1px;
+    margin-bottom: 20px;
+    background: rgba(8, 8, 8, 0.15);
+    border: none;
+    border-radius: 9px;
+    color: #fff;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+  }
+  
+  #signupForm input:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.25);
+  }
+  
+  #signupForm button {
+    width: 100%;
+    padding: 10px;
+    background: #505153;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(75, 73, 73, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  #signupForm button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(83, 82, 82, 0.6);
+  }
+  
+  .signup-form .login-text {
+    color: #fff;
+    font-size: 0.9rem;
+    margin-top: 15px;
+    text-align: center;
+  }
+  
+  .signup-form .login-text a {
+    color: #00ffd5;
+    text-decoration: none;
+  }
+  
+  .signup-form .login-text a:hover {
+    text-decoration: underline;
+  }
+  

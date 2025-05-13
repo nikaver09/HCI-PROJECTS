@@ -1,0 +1,48 @@
+.login-form {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 30px;
+  border-radius: 10px;
+  width: 300px;
+  margin: 100px auto;
+  box-shadow: 0 4px 5px rgba(0,0,0,0.5);
+}
+
+.login-form input {
+  display: block;
+  width: 95%;
+  padding: 8px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.login-form button {
+  width: 98%;
+  padding: 12px;
+  background-color: #ff4500;
+  border: none;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.login-form button:hover {
+  background-color: #e03e00;
+}
+/* Logo spin animation */
+@keyframes rotateLogo {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spin-once {
+  animation: rotateLogo 0.5s ease-in-out; /
+}
